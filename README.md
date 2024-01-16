@@ -17,9 +17,10 @@
     PRIMARY KEY (stu_num),
     UNIQUE KEY id (id)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
    这步是创建stu表。包括姓名，性别和学号。其中stu_num(注意不是学号,相当于索引)是用来把stu表里的id(学号)连接后面classes表里的class_id的。
    
-6. CREATE TABLE classes (
+7. CREATE TABLE classes (
     class_id INT NOT NULL,
     subject VARCHAR(20) NOT NULL,
     score INT NOT NULL,
@@ -27,6 +28,7 @@
     PRIMARY KEY (class_id, subject),
     CONSTRAINT fk_classes_stu FOREIGN KEY (class_id) REFERENCES stu (stu_num) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
   这步是创建classes表，其中“CONSTRAINT fk_classes_stu FOREIGN KEY (class_id) REFERENCES stu (stu_num) ON DELETE CASCADE”这个指令代表当学生删除时，他关联的成绩也会被删除。
 
 
