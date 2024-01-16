@@ -1,7 +1,10 @@
 # - 代码使用
 第一步 下载代码解压。
+
 第二步 在src->Utils 里把数据库的用户和密码改成自己的。(用户名一般都为root)
+
 第三步 在终端或者平台创建数据库。
+
 1. mysql -u root -p
 2. 输入自己的密码
 3. create database pro_stumanage;
