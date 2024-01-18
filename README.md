@@ -29,6 +29,19 @@
     CONSTRAINT fk_classes_stu FOREIGN KEY (class_id) REFERENCES stu (stu_num) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+# - 更正后 添加用户注册表
+1. 在终端输入 mysql -u root -p;
+2. 输入密码
+3. use pro_stumanage;
+4. create table user(
+   username varchar(20),
+   password varchar(20));
+
+5。修改stu_num编号错误问题
+alter table stu auto_increment =1;
+alter table classes auto_increment = 1;
+
+
   这步是创建classes表，其中“CONSTRAINT fk_classes_stu FOREIGN KEY (class_id) REFERENCES stu (stu_num) ON DELETE CASCADE”这个指令代表当学生删除时，他关联的成绩也会被删除。
 
 
