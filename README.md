@@ -37,9 +37,10 @@
    username varchar(20),
    password varchar(20));
 
-5。修改stu_num编号错误问题
-alter table stu auto_increment =1;
-alter table classes auto_increment = 1;
+ 5修改stu_num编号错误问题
+ 
+ alter table stu auto_increment =1;
+ alter table classes auto_increment = 1;
 
 
   这步是创建classes表，其中“CONSTRAINT fk_classes_stu FOREIGN KEY (class_id) REFERENCES stu (stu_num) ON DELETE CASCADE”这个指令代表当学生删除时，他关联的成绩也会被删除。
