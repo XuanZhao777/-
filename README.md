@@ -40,10 +40,11 @@
    username varchar(20),
    password varchar(20));
 
- 5修改stu_num编号错误问题
+ 5. 修改stu_num编号错误问题
  
  alter table stu auto_increment =1;
  alter table classes auto_increment = 1;
+ 6. 注意在MainView里，需要更改自己的数据库名字和密码
 
 
 
